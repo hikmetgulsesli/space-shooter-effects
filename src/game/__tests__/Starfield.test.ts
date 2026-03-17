@@ -128,7 +128,6 @@ describe('StarfieldSystem', () => {
       const stars = system.getStars();
       const star = stars[0];
       const initialX = star.x;
-      const initialY = star.y;
 
       // Move diagonally
       system.update(1.0, { x: 1, y: 0 });
