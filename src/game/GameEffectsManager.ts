@@ -218,7 +218,7 @@ export class GameEffectsManager {
    */
   setEnabled(effect: keyof EffectsManagerConfig, enabled: boolean): void {
     if (effect in this.config) {
-      (this.config as any)[effect] = enabled;
+      (this.config as Record<keyof EffectsManagerConfig, boolean | number>)[effect] = enabled;
     }
   }
 }

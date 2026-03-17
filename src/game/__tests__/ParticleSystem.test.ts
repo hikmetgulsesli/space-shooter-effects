@@ -4,7 +4,7 @@
 
 import { describe, it, expect, beforeEach } from 'vitest';
 import { ParticleSystem } from '../systems';
-import { ParticleType, ParticleConfig } from '../types';
+import { ParticleType } from '../types';
 
 describe('ParticleSystem', () => {
   let system: ParticleSystem;

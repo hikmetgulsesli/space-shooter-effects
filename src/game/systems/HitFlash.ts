@@ -42,8 +42,8 @@ export class HitFlashSystem {
     };
 
     // Store animation parameters on the flash object
-    (flash as any).duration = duration;
-    (flash as any).elapsed = 0;
+    flash.duration = duration;
+    flash.elapsed = 0;
 
     this.flashes.push(flash);
     return flash;
@@ -94,9 +94,9 @@ export class HitFlashSystem {
    */
   update(deltaTime: number): void {
     this.flashes = this.flashes.filter((flash) => {
-      const duration = (flash as any).duration as number;
-      const elapsed = ((flash as any).elapsed as number) + deltaTime;
-      (flash as any).elapsed = elapsed;
+      const duration = flash.duration ?? 0.3;
+      const elapsed = (flash.elapsed ?? 0) + deltaTime;
+      flash.elapsed = elapsed;
 
       const progress = Math.min(1, elapsed / duration);
 

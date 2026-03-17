@@ -116,6 +116,9 @@ export interface HitFlash {
   maxRadius: number;
   alpha: number;
   color: string;
+  // Animation properties (internal use)
+  duration?: number;
+  elapsed?: number;
 }
 
 // Bullet types
