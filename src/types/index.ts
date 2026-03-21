@@ -92,3 +92,6 @@ export type BoardAction =
   | { type: 'DELETE_TAG'; payload: string }
   | { type: 'SET_LOADING'; payload: boolean }
   | { type: 'SET_ERROR'; payload: string | null };
+
+// Re-export music types
+export * from './music';
